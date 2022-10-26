@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        flatDir {
+            dirs "D:\\Users\\orhan\\Belgeler\\AroneApp\\unityLibrary\\libs"
+        }
+    }
+}
+rootProject.name = "AroneApp"
+include ':app'
+
+include ':unityLibrary'
+project(':unityLibrary').projectDir=new File(project(':app').projectDir, '../unityLibrary')
